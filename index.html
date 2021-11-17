@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Hash Table</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="title-box">HASH TABLE</div>
+                <nav>
+                    <ul>
+                        <li id="lin-btn" onclick="linearReset()"><a href="#">Linear Probing</a></li>
+                        <li id="quad-btn" onclick="quadraticReset()"><a href="#">Quadratic Probing</a></li>
+                        <li id="double-btn" onclick="doubleHashReset()"><a href="#">Double Hashing</a></li>
+                        <li id="calc-btn"><a href="#">Step Calculator</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <div class="page-body">
+            <div id="algorithms">
+                <button class="btn" onclick="createBox()">ADD ADDRESS</button>
+                <button class="btn" onclick="fill()">FILL</button>
+                <button id="reset-btn" class="btn" onclick="linearReset()">RESET</button><br><br>
+                <input id="input" type="text" placeholder="0 to 1500" required>
+                <div class="flex-btn">
+                    <button id="insert-btn" class="btn" onclick="linearInsert()">INSERT</button> 
+                    <button id="search-btn" class="btn" onclick="_linearSearch()"> SEARCH</button>
+                </div>
+                <button id="auto-btn" class="btn" onclick="autoLinearInsert()">AUTO INSERT</button>
+                <button id="auto100-btn" class="btn" onclick="autoLinearInsert100()">FUN</button>
+            </div>
+            <div id="table"></div>
+            <div id="data">LINEAR PROBING<br><br>HASH FUNCTION:<br>
+                #multiplicationHash(key){<br>
+                    &nbsplet V = (Math.sqrt(5.0) - 1)/2;<br>
+                    &nbsplet fractionalExtract = key*V;<br>
+                    &nbsplet result = Math.floor(this.#tableSize*fractionalExtract);<br>
+                    &nbspreturn result;<br>
+                }<br><br><br>
+                AVERAGE STEPS:
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
